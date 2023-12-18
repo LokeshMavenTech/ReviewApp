@@ -11,13 +11,22 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import app.scrollfrom.movie_api_db.Adapters.HomeRecyclerAdapters;
+
 public class MainActivity extends AppCompatActivity {
 BottomNavigationView bnView;
+SearchFragment btnSearch;
+
+HomeRecyclerAdapters adapters;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         bnView=findViewById(R.id.bnView);
+        btnSearch=(SearchFragment) getSupportFragmentManager().findFragmentById(R.id.btnSearch);
+
+
 
         bnView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
