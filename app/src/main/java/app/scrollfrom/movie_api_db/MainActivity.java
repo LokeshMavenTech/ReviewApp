@@ -43,6 +43,7 @@ HomeRecyclerAdapters adapters;
         }
 
         });
+
         bnView.setSelectedItemId(R.id.popular);
     }
     public void loadFrag(Fragment fragment,boolean flag){
